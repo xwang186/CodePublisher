@@ -1,0 +1,14 @@
+<!Doctype html>
+<html>
+  <head>
+    <style>
+      body {
+        padding:15px 40px;
+        font-family: Consolas;
+        font-size: 1.25em;
+        font-weight: normal;
+      }
+    </style>
+  </head>
+  <body><h3>StringUtilities.cpp</h3><pre>///////////////////////////////////////////////////////////////////////<br>// StringUtilities.cpp - small, generally useful, helper classes     //<br>// ver 1.0                                                           //<br>// Language:    C++, Visual Studio 2017                              //<br>// Application: Most Projects, CSE687 - Object Oriented Design       //<br>// Author:      Jim Fawcett, Syracuse University, CST 4-187          //<br>//              jfawcett@twcny.rr.com                                //<br>///////////////////////////////////////////////////////////////////////<br><br>#include &ltcctype&gt<br>#include &ltiostream&gt<br>#include "StringUtilities.h"<br>#include "../CodeUtilities/CodeUtilities.h"<br><br>#ifdef TEST_STRINGUTILITIES<br><br>using namespace Utilities;<br><br>int main()<br>{<br>  Title("Testing Utilities Package");<br>  putline();<br><br>  title("test split(std::string, ',')");<br><br>  std::string test = "a, \n, bc, de, efg, i, j k lm nopq rst";<br>  std::cout &lt&lt "\n  test string = " &lt&lt test;<br><br>  std::vector&ltstd::string&gt result = split(test);<br>  showSplits(result);<br><br>  title("test split(std::string, ' ')");<br><br>  std::cout &lt&lt "\n  test string = " &lt&lt test;<br><br>  result = split(test, ' ');<br>  showSplits(result);<br><br>  putline(2);<br>  return 0;<br>}<br>#endif<br></pre>  </body>
+</html>

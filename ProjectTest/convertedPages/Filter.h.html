@@ -1,0 +1,68 @@
+<!Doctype html>
+<html>
+  <head>
+    <style>
+      body {
+        padding:15px 40px;
+        font-family: Consolas;
+        font-size: 1.25em;
+        font-weight: normal;
+      }
+      span {
+        display:inline;
+      }
+    </style>
+    <script>
+      function showHideClass(className) {
+        let elems = document.getElementsByClassName(className);
+        if (elems === null) {
+          return;
+        }
+        for (let i = 0; i < elems.length; ++i) {
+          let displayProp = elems[i].style.display;
+          if (displayProp === 'none')
+            elems[i].style['display'] = "inline";
+          else
+            elems[i].style['display'] = "none";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <button name="button1" onclick="showHideClass('toggleClassDisplay')">Show or Hide Class Contents</button>
+    <button name="button2" onclick="showHideClass('toggleMethodDisplay')">Show or Hide Method Contents</button>
+    <button name="button3" onclick="showHideClass('toggleCommentDisplay')">Show or Hide Conment Contents</button><h3>Filter.h</h3><pre>#pragma once
+/////////////////////////////////////////////////////////////////////////////
+// Filter.h - Filter file names using regex match                          //
+// Author: Xiaohan Wang                                                    //
+/////////////////////////////////////////////////////////////////////////////
+/*
+ * Package Operations:
+ * -------------------
+ * This package contains 2 files --Filter.h and Filter.cpp.
+ * This package is designed to find matched files by their file names given.
+ * To initialize the filter a regex value will be given.
+ * To do the filter, use the function RegIt and provide the vector of the file names.
+ *
+ * Required Files:
+ * ---------------
+ * Filter.h  Filter.cpp
+ *
+ *
+ * Maintenance History:
+ * --------------------
+ * ver 1.0 : 4 Feb 2019
+ *
+ */
+#include<string>
+#include<vector>
+class Filter {
+<div class="toggleClassDisplay">
+public:
+	Filter(std::string reger);
+	std::vector<std::string> RegIt(std::vector<std::string> &target);
+private:
+	std::string reg_;
+};
+</pre>  </body>
+</html>

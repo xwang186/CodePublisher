@@ -1,0 +1,14 @@
+<!Doctype html>
+<html>
+  <head>
+    <style>
+      body {
+        padding:15px 40px;
+        font-family: Consolas;
+        font-size: 1.25em;
+        font-weight: normal;
+      }
+    </style>
+  </head>
+  <body><h3>Convert.h</h3><pre>#pragma once<br>/*<br> * Package Operations:<br> * -------------------<br> * This package contains 2 files --Convert.h and Convert.cpp.<br> * This package implements a function to convert a file into html file in a created folder "convertedPages"<br> * To use this package, use the function ConvertIt to convert.<br> * Two arguments should be given: first one is the target file name, the second one is the path that the file is under.<br> *<br> * Required Files:<br> * ---------------<br> * Convert.h  Convert.cpp<br> *<br> *<br> * Maintenance History:<br> * --------------------<br> * ver 1.0 : 4 Feb 2019<br> *<br> */<br>/////////////////////////////////////////////////////////////////////<br>// Convert.h                                                       //<br>//                                                                 //<br>// Xiaohan Wang, Jim Fawcett, Spring 2019                          //<br>/////////////////////////////////////////////////////////////////////<br><br>#include &ltstring&gt<br><br>class Convert {<br>public:<br>	Convert();<br>	void ConvertIt(const std::string& filename, std::string path);<br>private:<br>  std::string str_;<br>};</pre>  </body>
+</html>
